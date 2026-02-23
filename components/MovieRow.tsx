@@ -82,7 +82,7 @@ export const MovieRow = memo(({ title, movies: init = [], isTop10 = false, genre
   return (
     <div className="relative group py-4 md:py-8">
       <div className="flex items-center justify-between px-4 md:px-8 lg:px-12 mb-2 md:mb-4">
-        <h2 className="text-lg md:text-2xl 2xl:text-4xl font-black tracking-tighter text-white uppercase italic">{title}</h2>
+        <div className="flex items-center gap-3"><div className="rounded-full flex-shrink-0" style={{ width: '4px', height: '22px', background: '#E50914' }} /><h2 className="text-sm md:text-base font-black uppercase text-white tracking-widest">{title}</h2></div>
         <div className="hidden md:flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
           <button onClick={() => scroll('left')} className="p-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-all outline-none"><ChevronLeft size={20} /></button>
           <button onClick={() => scroll('right')} className="p-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-all outline-none"><ChevronRight size={20} /></button>
